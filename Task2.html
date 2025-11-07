@@ -1,0 +1,161 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #eeeeee;
+            }
+            .form-container {
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .form-container h1 {
+                text-align: left;
+                margin-bottom: 10px;
+                font-size: 28px;
+            }
+            form {
+                max-width: 100%;
+                margin: 0;
+            }
+            .row {
+                display: flex;
+                gap: 20px;
+            }
+            .field {
+                flex: 1;
+            }
+            .hint {
+                font-size: 0.8em;
+                color: grey;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+
+                border: none;
+                border-radius: 6px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+                outline: none;
+                transition: box-shadow 0.3s ease;
+            }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="date"]:focus,
+            textarea:focus {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+            }
+            input[type="radio"] {
+                outline: none;
+                border: none;
+                accent-color: orange;
+                transform: scale(1.4);
+                cursor: pointer;
+            }
+            .checkbox-group {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 5px;
+            }
+            .checkbox-group label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin: 0;
+                font-size: 0.8em;
+                color: grey;  
+            }
+            input[type="checkbox"] {
+                accent-color: orange;
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+            button {
+                background-color: orange;
+                color: white;
+                padding: 18px 40px;
+                border: none;
+                cursor: pointer;
+            }   
+            button:hover {
+                background-color: #cc7a00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">    
+            <h1>Favourite TV Shows survey</h1>
+            <p class="hint">Help us to understand what TV shows are your favourite</p>
+
+            <form>
+                <div class="row">
+                    <div class="field">
+                        <label for="firstName">
+                            First Name <span class="hint">(max 30 characters a–z and A–Z)</span>
+                        </label><br>
+                        <input id="firstName" type="text" placeholder="e.g. John">
+                    </div>
+                    <div class="field">
+                        <label for="lastName">
+                            Last Name <span class="hint">(max 30 characters a–z and A–Z)</span>
+                        </label><br>
+                        <input id="lastName" type="text" placeholder="e.g. Smith">
+                    </div>
+                </div>
+
+                <p>
+                    <label for="email">Email Address</label><br>
+                    <input id="email" type="email" placeholder="e.g. student@vilniustech.lt">
+                </p>
+
+                <p>
+                    <label for="address">Address</label><br>
+                    <textarea id="address"></textarea>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth</label><br>
+                    <input id="dob" type="date">
+                </p>
+
+                <p>Gender</p>
+                <label><input type="radio" name="gender" value="male">Male</label><br>
+                <label><input type="radio" name="gender" value="female">Female</label>
+
+                <p>Favourite TV Shows list</p>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+
+                <p>Your Favourite TV show type</p>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="type" value="adventure"><span>Adventure</span></label>
+                    <label><input type="checkbox" name="type" value="drama"><span>Drama</span></label>
+                    <label><input type="checkbox" name="type" value="horror"><span>Horror</span></label>
+                    <label><input type="checkbox" name="type" value="documentary"><span>Documentary</span></label>
+                    <label><input type="checkbox" name="type" value="other"><span>Other</span></label>
+                </div>
+
+                <p class="hint">
+                    <label>
+                        <input type="checkbox" name="agree">
+                        Creating an account means you're okay with our
+                        <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.
+                    </label>
+                </p>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </body>
+</html>
