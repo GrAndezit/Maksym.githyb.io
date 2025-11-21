@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+
+            <div class="keys">
+                <button class="key" data-action="clear">C</button>
+                <button class="key" data-action="sign">±</button>
+                <button class="key" data-action="percent">%</button>
+                <button class="key" data-action="operator" data-operator="divide">÷</button>
+
+                <button class="key" data-action="number">7</button>
+                <button class="key" data-action="number">8</button>
+                <button class="key" data-action="number">9</button>
+                <button class="key" data-action="operator" data-operator="multiply">×</button>
+
+                <button class="key" data-action="number">4</button>
+                <button class="key" data-action="number">5</button>
+                <button class="key" data-action="number">6</button>
+                <button class="key" data-action="operator" data-operator="subtract">−</button>
+
+                <button class="key" data-action="number">1</button>
+                <button class="key" data-action="number">2</button>
+                <button class="key" data-action="number">3</button>
+                <button class="key" data-action="operator" data-operator="add">+</button>
+
+                <button class="key key-zero" data-action="number">0</button>
+                <button class="key" data-action="decimal">.</button>
+                <button class="key key-equal" data-action="equal">=</button>
+            </div>
+        </div>
+    </body>
+</html>

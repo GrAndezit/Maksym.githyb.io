@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise 2</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: white;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .image-box {
+                width: 500px;
+                height: 350px;
+                background-image: url("image.jpg");
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                margin-top: 20px;
+            }
+
+            .label {
+                position: absolute;
+                font-size: 16px;
+                color: black;
+            }
+
+            .top-left { top: 10px; left: 10px; }
+            .top-right { top: 10px; right: 10px; }
+            .bottom-left { bottom: 10px; left: 10px; }
+            .bottom-right { bottom: 10px; right: 10px; }
+            .centered {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-box">
+            <div class="label top-left">Top Left</div>
+            <div class="label top-right">Top Right</div>
+            <div class="label centered">Centered</div>
+            <div class="label bottom-left">Bottom Left</div>
+            <div class="label bottom-right">Bottom Right</div>
+        </div>
+    </body>
+</html>
