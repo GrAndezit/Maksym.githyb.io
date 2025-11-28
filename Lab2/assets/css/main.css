@@ -3722,3 +3722,439 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Task 1 */
+/* New heading font family */
+:root {
+  --font-heading-new: "DM Serif Display", Georgia, serif;
+}
+
+/* Override for headings */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading-new);        /* New font stack */
+  color: var(--heading-color);
+  font-weight: 700;                            /* Weight requirement */
+  margin: 0 0 0.5em;                           /* Consistent spacing */
+}
+
+/* Individual hierarchy for h1–h3 */
+h1 {
+  font-size: 2.875rem;                         /* New size */
+  line-height: 1.15;                           /* New line-height */
+  letter-spacing: -0.02em;                     /* New letter-spacing */
+}
+
+h2 {
+  font-size: 2.125rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;                      /* Clearly different style */
+}
+
+/* Paragraph style update */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1em;
+}
+
+/* Task 2 */
+a,
+.navmenu a,
+.navmenu li a,
+.footer-links a,
+.hero a,
+.about a,
+.services a,
+.resume a {
+  color: #38bdf8 !important;                                      /* default */
+  text-decoration: none !important;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.4) !important;
+  transition: 0.2s !important;
+}
+
+a:hover,
+.navmenu a:hover,
+.navmenu li a:hover,
+.footer-links a:hover,
+.hero a:hover,
+.about a:hover,
+.services a:hover,
+.resume a:hover {
+  color: #0ea5e9 !important;                                      /* hover */
+  border-bottom-color: rgba(56, 189, 248, 0.8) !important;
+}
+
+a:active,
+.navmenu a:active,
+.footer-links a:active {
+  color: #0369a1 !important;                                      /* active */
+  border-bottom-color: #0369a1 !important;
+}
+
+
+/* ---------- BUTTONS (Full forced override) ---------- */
+
+button,
+.btn,
+.btn-primary,
+.btn-secondary,
+.about .btn-custom,
+.hero .hero-content .hero-actions .btn-primary,
+.hero .hero-content .hero-actions .btn-secondary,
+.services .btn-custom,
+.resume .btn-primary,
+.resume .btn-secondary {
+  background: #38bdf8 !important;                                 /* default */
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  border: none !important;
+  padding: 0.75rem 1.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+button:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.about .btn-custom:hover,
+.hero .btn-primary:hover,
+.hero .btn-secondary:hover,
+.services .btn-custom:hover,
+.resume .btn-primary:hover,
+.resume .btn-secondary:hover {
+  background: #0ea5e9 !important;                                 /* hover */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5) !important;
+}
+
+button:active,
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.about .btn-custom:active,
+.hero .btn-primary:active,
+.hero .btn-secondary:active,
+.services .btn-custom:active,
+.resume .btn-primary:active,
+.resume .btn-secondary:active {
+  background: #0369a1 !important;                                 /* active */
+  transform: translateY(1px) !important;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Task 3 */
+/* --- Spacing + surface tokens --- */
+:root {
+  /* 4px spacing scale */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+
+  /* Surface styling */
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* --- Consistent section spacing (3+ sections) --- */
+.hero,
+.about,
+.services,
+.skills {
+  padding-block: var(--space-8);     /* top & bottom padding */
+}
+
+/* A bit of consistent inner spacing */
+.hero .container {
+  padding-block: var(--space-6);
+}
+
+.about .intro-header {
+  margin-bottom: var(--space-6);
+}
+
+/* --- Restyled content blocks / surfaces --- */
+/* Services cards */
+.services .service-item {
+  padding: var(--space-6) var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  background: radial-gradient(circle at top left,
+              rgba(148, 163, 184, 0.2),
+              var(--surface-color));
+  box-shadow: var(--shadow-soft);
+}
+
+/* Resume education cards */
+.resume .education-skills .education-grid .education-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 82%);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Skills highlight card (sidebar) */
+.skills .skills-sidebar .expertise-highlight {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background: radial-gradient(circle at top left,
+              rgba(56, 189, 248, 0.18),
+              var(--surface-color));
+  box-shadow: var(--shadow-soft);
+}
+
+/* Testimonials slide card */
+.testimonials .testimonial-slide {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Task 4 */
+/* -----------------------------
+   COMPONENT 1: SIDEBAR NAVBAR
+   ----------------------------- */
+
+.navmenu {
+  padding-top: 1.5rem;
+}
+
+/* Make nav links look like pill buttons */
+.navmenu ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.navmenu a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;                    /* pill shape */
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+/* Icon inside nav */
+.navmenu a .navicon {
+  font-size: 1rem;
+}
+
+/* Hover state */
+.navmenu a:hover {
+  background: rgba(56, 189, 248, 0.12);    /* soft cyan */
+  border-color: rgba(56, 189, 248, 0.6);
+  transform: translateX(3px);
+}
+
+/* Active/Current page link */
+.navmenu .active,
+.navmenu .active:focus {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.9);
+  color: #e5f7ff;
+}
+
+/* -----------------------------
+   COMPONENT 2: BACK-TO-TOP BUTTON
+   ----------------------------- */
+
+.scroll-top {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;                    /* circular */
+  border: 2px solid rgba(56, 189, 248, 0.9);
+  background: radial-gradient(circle at 30% 20%,
+              #e0f2fe,
+              #0ea5e9);                    /* gradient bubble look */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+/* Icon inside back-to-top */
+.scroll-top i {
+  font-size: 1.3rem;
+  color: #0b1120;
+}
+
+/* Hover state */
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Active (pressed) state */
+.scroll-top:active {
+  transform: translateY(1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Task 5 */
+/* --- UNORDERED LIST (custom bullets) --- */
+ul.custom-ul {
+  list-style: none;
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+ul.custom-ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+ul.custom-ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(56,189,248,0.6);
+}
+
+/* --- ORDERED LIST (counters) --- */
+ol.custom-ol {
+  counter-reset: myCounter;
+  margin-left: 1.8rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+ol.custom-ol li {
+  counter-increment: myCounter;
+  margin-bottom: 0.7rem;
+  padding-left: 2.2rem;
+  position: relative;
+}
+
+ol.custom-ol li::before {
+  content: counter(myCounter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: #0ea5e9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* --- NESTED LIST (inside UL or OL) --- */
+.custom-ul ul,
+.custom-ol ul {
+  margin-top: 0.4rem;
+  margin-left: 1.5rem;
+  list-style: none;
+}
+
+.custom-ul ul li,
+.custom-ol ul li {
+  padding-left: 1rem;
+  margin-bottom: 0.45rem;
+  position: relative;
+}
+
+/* Nested bullet: small diamond */
+.custom-ul ul li::before,
+.custom-ol ul li::before {
+  content: "◆";
+  position: absolute;
+  left: -1rem;
+  color: #7dd3fc;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+/* Task 6 */
+.table-wrapper {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* Header row */
+table.data-table thead {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+table.data-table thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.5);
+}
+
+/* Body cells */
+table.data-table tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.7);
+}
+
+/* Zebra striping */
+table.data-table tbody tr:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+table.data-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+/* Row hover */
+table.data-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.16);
+}
+
+/* Text vs number alignment */
+table.data-table td.text-cell {
+  text-align: left;
+}
+
+table.data-table td.num-cell {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
